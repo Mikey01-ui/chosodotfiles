@@ -1,0 +1,214 @@
+{
+    "position": "top",
+    "layer": "bottom",
+    "spacing": 4,
+    "height": 42,
+
+    "margin-top": 8,
+    "margin-right": 12,
+    "margin-bottom": 0,
+    "margin-left": 12,
+
+    "modules-left": [
+        "custom/launcher",
+        "hyprland/workspaces",
+        "custom/separator",
+        "hyprland/window"
+    ],
+
+    "modules-center": [
+    	"clock"
+    ],
+
+    "modules-right": [
+        "custom/chrome",
+        "custom/vscode", 
+        "custom/whatsapp",
+        "custom/youtube",
+        "custom/separator",
+        "cpu",
+        "memory",
+        "temperature",
+        "custom/separator",
+        "tray",
+        "hyprland/language",
+        "custom/swaync",
+        "battery",
+        "pulseaudio",
+        "custom/powermenu"
+    ],
+    
+    "custom/launcher": {
+        "format": " ",
+        "tooltip": false,
+        "on-click": "rofi -show drun",
+        "on-click-right": "python ~/Scripts/quick-launcher.py"
+    },
+    
+    "custom/separator": {
+        "format": "|",
+        "tooltip": false
+    },
+    
+    "custom/chrome": {
+        "format": "🌐",
+        "tooltip": true,
+        "tooltip-format": "Chrome",
+        "on-click": "google-chrome-stable",
+        "on-click-right": "google-chrome-stable --incognito"
+    },
+    
+    "custom/vscode": {
+        "format": "💻",
+        "tooltip": true,
+        "tooltip-format": "VS Code",
+        "on-click": "code",
+        "on-click-right": "code --new-window"
+    },
+    
+    "custom/whatsapp": {
+        "format": "💬",
+        "tooltip": true,
+        "tooltip-format": "WhatsApp",
+        "on-click": "whatsapp-for-linux"
+    },
+    
+    "custom/youtube": {
+        "format": "📺",
+        "tooltip": true,
+        "tooltip-format": "YouTube",
+        "on-click": "google-chrome-stable --app=https://youtube.com"
+    },
+    
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": true,
+        "interval": 2,
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
+    },
+    
+    "memory": {
+        "format": " {percentage}%",
+        "tooltip": true,
+        "tooltip-format": "Memory: {used:0.1f}G / {total:0.1f}G",
+        "interval": 2,
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
+    },
+    
+    "temperature": {
+        "format": " {temperatureC}°C",
+        "tooltip": true,
+        "critical-threshold": 80,
+        "interval": 2
+    },
+    
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-icons": {
+            "default": ["", "", "", "", ""],
+            "charging": [""]
+        },
+        
+        "states": {
+            "warning": 20,
+            "critical": 10
+        },
+        
+        "tooltip-format": "Battery: {capacity}% ({time})",
+        "interval": 1,
+        "max-length": 25
+    },
+
+    "hyprland/workspaces" : {
+        "on-click": "activate",
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "🌐",
+            "2": "💻", 
+            "3": "📁",
+            "4": "💬",
+            "5": "🎵",
+            "6": "🎮",
+            "7": "📺",
+            "8": "⚙️",
+            "9": "📊",
+            "10": "🔧"
+        },
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+        }
+    },
+
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 50,
+        "tooltip": false
+    },
+
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "󰌌 US",
+        "format-ru": "󰌌 RU"
+    },
+
+    "tray": {
+        "spacing": 10,
+        "tooltip": false
+    },
+    
+    "pulseaudio": {
+        "scroll-step": 1,
+        "max-volume": 150,
+
+        "format": "{icon} {volume}%",
+        "format-muted": " {volume}%",
+        "format-icons": {
+            "default": ["", "", "", ""],
+            "muted": ""
+        },
+        "on-click": "pavucontrol",
+        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "tooltip": false
+    },
+    
+    "network": {
+        "format-wifi": "󰖩",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰖪",
+        "interval": 1,
+        "tooltip": true,
+        "tooltip-format": "{ifname}: {ipaddr}",
+        "on-click": "nm-connection-editor"
+    },
+
+    "clock": {
+        "format": " {:%H:%M}",
+        "format-alt": "󰸗 {:%a %B %d %Y  %H:%M}",
+        "tooltip": true,
+        "tooltip-format": "{:%A, %B %d, %Y}",
+        "interval": 1
+    },
+
+    "custom/swaync": {
+        "format": "",
+        "on-click": "swaync-client -t",
+        "tooltip": false
+    },
+    
+    "custom/powermenu": {
+        "format": "",
+        "on-click": "~/.config/rofi/powermenu.sh",
+        "tooltip": false
+    }
+}

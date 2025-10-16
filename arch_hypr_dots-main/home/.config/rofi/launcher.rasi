@@ -1,0 +1,152 @@
+/*
+ * Enhanced Rofi Theme
+ * Cool and clean design for quick app access
+ */
+
+configuration {
+    show-icons: true;
+    display-drun: " Apps";
+    display-run: " Run";
+    display-window: " Windows";
+    drun-display-format: "{name}";
+    disable-history: false;
+    fullscreen: false;
+    hide-scrollbar: true;
+    sidebar-mode: false;
+}
+
+@import "colors.rasi"
+
+* {
+    background-color: transparent;
+    text-color: @foreground;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    background-color: @background;
+    border: 2px solid @selected;
+    border-radius: 12px;
+    width: 600px;
+    location: center;
+    anchor: center;
+}
+
+mainbox {
+    padding: 20px;
+}
+
+inputbar {
+    background-color: @background-alt;
+    border: 2px solid @background-alt;
+    border-radius: 8px;
+    padding: 8px 16px;
+    spacing: 8px;
+    children: [ prompt, entry ];
+}
+
+prompt {
+    background-color: transparent;
+    text-color: @selected;
+}
+
+entry {
+    background-color: transparent;
+    placeholder-color: @foreground-alt;
+    placeholder: "Search apps...";
+}
+
+message {
+    margin: 12px 0 0;
+    border-radius: 8px;
+    border: 2px solid @background-alt;
+    background-color: @background-alt;
+}
+
+textbox {
+    padding: 8px 16px;
+}
+
+listview {
+    background-color: transparent;
+    columns: 2;
+    lines: 8;
+    spacing: 4px;
+    cycle: false;
+    dynamic: true;
+    layout: vertical;
+    margin: 12px 0 0;
+}
+
+element {
+    background-color: transparent;
+    border-radius: 8px;
+    padding: 8px 12px;
+    spacing: 8px;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+element normal.urgent {
+    background-color: @urgent;
+    text-color: @background;
+}
+
+element normal.active {
+    background-color: @active;
+    text-color: @background;
+}
+
+element selected.normal {
+    background-color: @selected;
+    text-color: @background;
+    border: 2px solid @selected;
+}
+
+element selected.urgent {
+    background-color: @urgent;
+    text-color: @background;
+}
+
+element selected.active {
+    background-color: @active;
+    text-color: @background;
+}
+
+element-icon {
+    background-color: transparent;
+    size: 32px;
+    cursor: pointer;
+}
+
+element-text {
+    background-color: transparent;
+    cursor: pointer;
+    vertical-align: 0.5;
+}
+
+/* Quick access section */
+mode-switcher {
+    spacing: 0;
+    margin: 12px 0 0;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: @background-alt;
+    text-color: @foreground;
+    border: 2px solid @background-alt;
+    border-radius: 8px;
+    margin: 0 4px;
+}
+
+button selected {
+    background-color: @selected;
+    text-color: @background;
+    border: 2px solid @selected;
+}

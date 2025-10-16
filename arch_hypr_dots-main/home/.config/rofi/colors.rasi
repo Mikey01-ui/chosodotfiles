@@ -1,0 +1,15 @@
+/*
+ * Color scheme for enhanced Rofi theme
+ * Cool dark theme with accent colors
+ */
+
+* {
+    background:     #1e1e2e;
+    background-alt: #313244;
+    foreground:     #cdd6f4;
+    foreground-alt: #bac2de;
+    selected:       #89b4fa;
+    active:         #a6e3a1;
+    urgent:         #f38ba8;
+    transparent:    #00000000;
+}

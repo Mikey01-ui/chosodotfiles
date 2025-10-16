@@ -1,0 +1,50 @@
+{
+    "logo": {
+        "source": "none"
+    },
+    "display": {
+        "separator": " -> "
+    },
+    "modules": [
+        {
+            "type": "title",
+            "format": "{#31}┌─{#red} {user-name-colored}@{host-name-colored} {#31}─{#red}[{#cyan} {os-name} {#red}]{#31}─┐"
+        },
+        {
+            "type": "separator",
+            "string": ""
+        },
+        {
+            "type": "kernel",
+            "format": "{#31}├─{#red}[{#green}🐧{#red}]{#cyan} Kernel    {#white}-> {result}"
+        },
+        {
+            "type": "uptime", 
+            "format": "{#31}├─{#red}[{#yellow}⏱️{#red}]{#cyan} Uptime    {#white}-> {result}"
+        },
+        {
+            "type": "packages",
+            "format": "{#31}├─{#red}[{#blue}📦{#red}]{#cyan} Packages  {#white}-> {result}"
+        },
+        {
+            "type": "shell",
+            "format": "{#31}├─{#red}[{#green}🐚{#red}]{#cyan} Shell     {#white}-> {result}"
+        },
+        {
+            "type": "terminal",
+            "format": "{#31}├─{#red}[{#purple}💻{#red}]{#cyan} Terminal  {#white}-> {result}"
+        },
+        {
+            "type": "cpu",
+            "format": "{#31}├─{#red}[{#red}🔥{#red}]{#cyan} CPU       {#white}-> {result}"
+        },
+        {
+            "type": "memory",
+            "format": "{#31}└─{#red}[{#cyan}💾{#red}]{#cyan} Memory    {#white}-> {result}"
+        },
+        {
+            "type": "separator",
+            "string": ""
+        }
+    ]
+}
