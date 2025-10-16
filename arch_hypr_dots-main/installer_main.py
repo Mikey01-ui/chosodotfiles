@@ -56,7 +56,7 @@ selected_drivers = drivers[
 ]
 do_backup = bool_selection("Do you want to backup config files?", True)
 do_ly_dm = bool_selection("Do you want to install Ly DM?", True)
-do_update_sysyem = bool_selection(
+do_update_system = bool_selection(
     "Do you want to update your system after install?", True
 )
 do_reboot = bool_selection("Do you want to reboot after install?", True)
@@ -69,7 +69,7 @@ log_print(r"""
                                          |___/  |_|                    |___/
 """)
 
-install_packages(selected_drivers, do_ly_dm, do_update_sysyem)
+install_packages(selected_drivers, do_ly_dm, do_update_system)
 
 log_print(r"""
           ___         _        _ _ _                _     _    __ _ _

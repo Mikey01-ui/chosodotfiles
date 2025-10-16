@@ -6,7 +6,7 @@ def install_packages(selected_drivers, do_ly_dm, do_update_system):
         "Pacman": [
             "hyprland",
             "hyprpicker",
-            "hyprpolkitagent",
+            "polkit-gnome",
             "hyprlock",
             "hypridle",
             "hyprsunset",
@@ -71,8 +71,6 @@ def install_packages(selected_drivers, do_ly_dm, do_update_system):
             "swww",
             "perl-file-mimeinfo",
             "firefox",
-            "google-chrome",
-            "code",
             "discord",
             "spotify-launcher",
             "telegram-desktop",

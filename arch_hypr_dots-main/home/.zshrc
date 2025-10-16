@@ -29,12 +29,15 @@ alias pac="sudo pacman"
 alias stat="cloc ."
 
 alias help="echo 'Nah bro'"
+alias choso="python ~/Scripts/choso-animated-banner.py --animate"
+alias choso-static="python ~/Scripts/choso-animated-banner.py --static"
 
 autoload -U compinit
 compinit
 
-# Cool Choso banner + system info
-python ~/Scripts/choso-banner.py
+# Animated Choso banner + system info
+python ~/Scripts/choso-animated-banner.py --static
+# To see full animation, run: python ~/Scripts/choso-animated-banner.py --animate
 fastfetch --config small
 
 eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/themes/custom_config.omp.json)"
